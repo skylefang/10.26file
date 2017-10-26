@@ -1,0 +1,158 @@
+@mixin auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin center{
+  position: absolute;
+  left: 0;
+  top:0;
+  right: 0;
+  bottom:0;
+  margin: auto;
+}
+@mixin centerS($w,$h){
+  position: absolute;
+  left: 50%;
+  top:50%;
+  margin-top: -$w/2;
+  margin-left: -$h/2;
+}
+@mixin circle{
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+@mixin borderR($r){
+  -webkit-border-radius: $r;
+  -moz-border-radius: $r;
+  border-radius: 50%;
+}
+$bg: 'img/bg.jpg';
+$width: 600px;
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+body{
+  overflow: hidden;
+  background: url("#{$bg}") center/cover;
+}
+.qipan{
+  width: $width;
+  height: $width;
+  @include center;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  .qizi{
+    position: relative;
+    z-index: 6666;
+    width: $width/15-10px;
+    height: $width/15-10px;
+    float: left;
+    margin: 5px;
+    @include circle;
+
+  }
+  .qizi.hei{
+     background: #000000;
+  }
+  .qizi.bai{
+    background: #FFFFFF;
+  }
+  .hang{
+    width: $width - $width / 15;
+    height: 1px;
+    background: #000000;
+    position: absolute;
+    left: $width / 15 / 2;
+    opacity:0;
+  }
+  .shu{
+    height: $width - $width / 15;
+    width: 1px;
+    background: #000000;
+    position: absolute;
+    top: $width / 15 / 2;
+    opacity: 0;
+  }
+
+  @for $i from 0 through 14{
+    div:nth-of-type(#{$i+1}){
+      top:$width / 30 + $i * $width / 15;
+      animation: shud 1s ease $i * 0.07s forwards;
+    }
+    span:nth-of-type(#{$i+1}){
+      left:$width / 30 + $i * $width / 15;
+      animation: hengd 1s ease $i * 0.07s forwards;
+    }
+  }
+  i{
+    position: absolute;
+    width: $width / 60 / 1.2;
+    height: $width / 60 / 1.2;
+    background: #000000;
+    transform: translate3d(-50%,-50%,0);
+    @include circle;
+    animation: diaoluo 2s ease;
+    @for $i from 1 through 5{
+      &:nth-of-type(#{$i}){
+        animation-delay: $i * 0.1s;
+      }
+    }
+    &:nth-of-type(1){
+      left: 3.5 * $width / 15;
+      top: 3.5 * $width / 15;
+    }
+    &:nth-of-type(2){
+      left: 11.5 * $width / 15;
+      top: 3.5 * $width / 15;
+    }
+    &:nth-of-type(3){
+      left: 7.5 * $width / 15;
+      top: 7.5 * $width / 15;
+    }
+    &:nth-of-type(4){
+      left: 3.5 * $width / 15;
+      top: 11.5 * $width / 15;
+    }
+    &:nth-of-type(5){
+      left: 11.5 * $width / 15;
+      top: 11.5 * $width / 15;
+    }
+  }
+}
+@keyframes diaoluo {
+   0%{
+     transform: translate3d(0,-800px,0);
+     opacity: 0;
+   }
+   100%{
+     transform: translate3d(-50%,-50%,0);
+     opacity: 1;
+   }
+ }
+@keyframes hengd {
+  0%{
+    transform: translate3d(-1000px,0,0);
+    opacity: 0;
+  }
+  100%{
+    transform: translate3d(0,0,0);
+    opacity: 1;
+  }
+}
+@keyframes shud {
+  0%{
+    transform: translate3d(-1000px,-1000px,0);
+    opacity: 0;
+  }
+  100%{
+    transform: translate3d(0,0,0);
+    opacity: 1;
+  }
+}

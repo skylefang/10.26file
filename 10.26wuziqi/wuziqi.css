@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+body {
+  overflow: hidden;
+  background: url("img/bg.jpg") center/cover; }
+
+.qipan {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer; }
+  .qipan .qizi {
+    position: relative;
+    z-index: 6666;
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%; }
+  .qipan .qizi.hei {
+    background: #000000; }
+  .qipan .qizi.bai {
+    background: #FFFFFF; }
+  .qipan .hang {
+    width: 560px;
+    height: 1px;
+    background: #000000;
+    position: absolute;
+    left: 20px;
+    opacity: 0; }
+  .qipan .shu {
+    height: 560px;
+    width: 1px;
+    background: #000000;
+    position: absolute;
+    top: 20px;
+    opacity: 0; }
+  .qipan div:nth-of-type(1) {
+    top: 20px;
+    animation: shud 1s ease 0s forwards; }
+  .qipan span:nth-of-type(1) {
+    left: 20px;
+    animation: hengd 1s ease 0s forwards; }
+  .qipan div:nth-of-type(2) {
+    top: 60px;
+    animation: shud 1s ease 0.07s forwards; }
+  .qipan span:nth-of-type(2) {
+    left: 60px;
+    animation: hengd 1s ease 0.07s forwards; }
+  .qipan div:nth-of-type(3) {
+    top: 100px;
+    animation: shud 1s ease 0.14s forwards; }
+  .qipan span:nth-of-type(3) {
+    left: 100px;
+    animation: hengd 1s ease 0.14s forwards; }
+  .qipan div:nth-of-type(4) {
+    top: 140px;
+    animation: shud 1s ease 0.21s forwards; }
+  .qipan span:nth-of-type(4) {
+    left: 140px;
+    animation: hengd 1s ease 0.21s forwards; }
+  .qipan div:nth-of-type(5) {
+    top: 180px;
+    animation: shud 1s ease 0.28s forwards; }
+  .qipan span:nth-of-type(5) {
+    left: 180px;
+    animation: hengd 1s ease 0.28s forwards; }
+  .qipan div:nth-of-type(6) {
+    top: 220px;
+    animation: shud 1s ease 0.35s forwards; }
+  .qipan span:nth-of-type(6) {
+    left: 220px;
+    animation: hengd 1s ease 0.35s forwards; }
+  .qipan div:nth-of-type(7) {
+    top: 260px;
+    animation: shud 1s ease 0.42s forwards; }
+  .qipan span:nth-of-type(7) {
+    left: 260px;
+    animation: hengd 1s ease 0.42s forwards; }
+  .qipan div:nth-of-type(8) {
+    top: 300px;
+    animation: shud 1s ease 0.49s forwards; }
+  .qipan span:nth-of-type(8) {
+    left: 300px;
+    animation: hengd 1s ease 0.49s forwards; }
+  .qipan div:nth-of-type(9) {
+    top: 340px;
+    animation: shud 1s ease 0.56s forwards; }
+  .qipan span:nth-of-type(9) {
+    left: 340px;
+    animation: hengd 1s ease 0.56s forwards; }
+  .qipan div:nth-of-type(10) {
+    top: 380px;
+    animation: shud 1s ease 0.63s forwards; }
+  .qipan span:nth-of-type(10) {
+    left: 380px;
+    animation: hengd 1s ease 0.63s forwards; }
+  .qipan div:nth-of-type(11) {
+    top: 420px;
+    animation: shud 1s ease 0.7s forwards; }
+  .qipan span:nth-of-type(11) {
+    left: 420px;
+    animation: hengd 1s ease 0.7s forwards; }
+  .qipan div:nth-of-type(12) {
+    top: 460px;
+    animation: shud 1s ease 0.77s forwards; }
+  .qipan span:nth-of-type(12) {
+    left: 460px;
+    animation: hengd 1s ease 0.77s forwards; }
+  .qipan div:nth-of-type(13) {
+    top: 500px;
+    animation: shud 1s ease 0.84s forwards; }
+  .qipan span:nth-of-type(13) {
+    left: 500px;
+    animation: hengd 1s ease 0.84s forwards; }
+  .qipan div:nth-of-type(14) {
+    top: 540px;
+    animation: shud 1s ease 0.91s forwards; }
+  .qipan span:nth-of-type(14) {
+    left: 540px;
+    animation: hengd 1s ease 0.91s forwards; }
+  .qipan div:nth-of-type(15) {
+    top: 580px;
+    animation: shud 1s ease 0.98s forwards; }
+  .qipan span:nth-of-type(15) {
+    left: 580px;
+    animation: hengd 1s ease 0.98s forwards; }
+  .qipan i {
+    position: absolute;
+    width: 8.3333333333px;
+    height: 8.3333333333px;
+    background: #000000;
+    transform: translate3d(-50%, -50%, 0);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    animation: diaoluo 2s ease; }
+    .qipan i:nth-of-type(1) {
+      animation-delay: 0.1s; }
+    .qipan i:nth-of-type(2) {
+      animation-delay: 0.2s; }
+    .qipan i:nth-of-type(3) {
+      animation-delay: 0.3s; }
+    .qipan i:nth-of-type(4) {
+      animation-delay: 0.4s; }
+    .qipan i:nth-of-type(5) {
+      animation-delay: 0.5s; }
+    .qipan i:nth-of-type(1) {
+      left: 140px;
+      top: 140px; }
+    .qipan i:nth-of-type(2) {
+      left: 460px;
+      top: 140px; }
+    .qipan i:nth-of-type(3) {
+      left: 300px;
+      top: 300px; }
+    .qipan i:nth-of-type(4) {
+      left: 140px;
+      top: 460px; }
+    .qipan i:nth-of-type(5) {
+      left: 460px;
+      top: 460px; }
+
+@keyframes diaoluo {
+  0% {
+    transform: translate3d(0, -800px, 0);
+    opacity: 0; }
+  100% {
+    transform: translate3d(-50%, -50%, 0);
+    opacity: 1; } }
+@keyframes hengd {
+  0% {
+    transform: translate3d(-1000px, 0, 0);
+    opacity: 0; }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+@keyframes shud {
+  0% {
+    transform: translate3d(-1000px, -1000px, 0);
+    opacity: 0; }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+
+/*# sourceMappingURL=wuziqi.css.map */
